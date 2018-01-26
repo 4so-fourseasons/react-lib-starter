@@ -1,0 +1,53 @@
+{
+  "env": {
+    "es": {
+      "ignore": [
+        "**/*.test.js"
+      ],
+      "plugins": [
+        "babel-plugin-styled-components"
+      ],
+      "presets": [
+        [
+          "env",
+          {
+            "useBuiltIns": false,
+            "modules": false
+          }
+        ],
+        "react",
+        "stage-3"
+      ]
+    },
+    "commonjs": {
+      "ignore": [
+        "**/*.test.js"
+      ],
+      "plugins": [
+        "babel-plugin-styled-components"
+      ],
+      "presets": [
+        [
+          "env",
+          {
+            "useBuiltIns": false
+          }
+        ],
+        "react",
+        "stage-3"
+      ]
+    },
+    "test": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ],
+        "react",
+        "stage-3"
+      ]
+    }
+  }
+}
