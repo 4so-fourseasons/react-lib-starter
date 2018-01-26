@@ -1,10 +1,7 @@
-import { makeWithLoadingIndicator } from './HOCS/makeWithLoadingIndicator'
-import Cube from './components/Cube'
+import { ExampleButton } from './ExampleButton'
 
-export { Cube }
-export { makeWithLoadingIndicator }
+export { ExampleButton }
 
 export default {
-  makeWithLoadingIndicator,
-  Cube
+  ExampleButton
 }

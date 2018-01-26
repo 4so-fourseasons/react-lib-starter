@@ -1,8 +1,8 @@
 {
-    "project_name": "npm-lib-starter",
+    "project_name": "my-react-lib",
     "maintainer": "Theo Salzmann",
     "email": "theo.salzmann@4so.de",
-    "short_description": "Kickstart npm libraries",
+    "short_description": "Kickstart react component libraries",
     "base_url": "github.com",
     "namespace": "4so-fourseasons",
     "scoped_package": ["NO", "yes"],

@@ -22,6 +22,7 @@
         * [Scoped releases](#scoped-releases)
         * [Basic publishing routine](#basic-publishing-routine)
     * [API](#api)
+    * [development server](#development-server)
         * [build](#build)
         * [flow](#flow)
         * [lint](#lint)
@@ -240,6 +241,13 @@ Below you find the most important npm scripts, that are included
 in your library by default.
 
 
+## development server
+
+```bash
+npm run storybook
+```
+
+
 ### build
 
 ```bash
@@ -275,6 +283,7 @@ Uses the fix option so standard tries to resolve conflicts automatically.
 
 
 ### test
+
 
 ```bash
 npm run test

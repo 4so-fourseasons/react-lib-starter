@@ -1,5 +1,5 @@
 {
-  "name": "@4so-fourseasons/react-hoc-spinners",
+  "name": "{%- if cookiecutter.scoped_package == 'yes' -%}@{{cookiecutter.namespace}}/{%- endif -%}{{cookiecutter.project_name}}",
   "version": "1.0.0",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -9,17 +9,17 @@
     "lib",
     "src"
   ],
-  "description": "Higher Order Component Loading Spinner Library",
+  "description": "{{cookiecutter.short_description}}",
   "repository": {
     "type": "git",
-    "url": "git@github.com:4so-fourseasons/react-hoc-spinners.git"
+    "url": "{{cookiecutter.repo_url}}"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/4so-fourseasons/react-hoc-spinners/issues"
+    "url": "{{cookiecutter.url}}"
   },
   "scripts": {
-    "clean": "rimraf lib",
+    "clean": "rimraf lib es",
     "prepublishOnly": "npm run lint && npm run flow && npm run test && npm run build",
     "prebuild": "npm run clean",
     "build": "npm run build:commonjs && npm run build:es",
@@ -66,7 +66,8 @@
     "ignore": [
       "**/dist/",
       "**/flow-typed",
-      "**/docs"
+      "**/docs",
+      "**/*.stories.{js,jsx}"
     ],
     "globals": [
       "jest",
@@ -79,16 +80,11 @@
   "license": "MIT",
   "private": false,
   "author": {
-    "name": "Theo Salzmann",
-    "email": "theo.salzmann@4so.de"
+    "name": "{{cookiecutter.maintainer}}",
+    "email": "{{cookiecutter.email}}"
   },
   "contributors": [],
-  "homepage": "http://4so.de",
-  "engines": {},
-  "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
+  "homepage": "{{cookiecutter.homepage}}",
   "dependencies": {
     "recompose": "^0.26.0",
     "styled-components": "^2.3.0"

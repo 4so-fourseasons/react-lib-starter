@@ -1,55 +1,29 @@
-[![Build Status](https://travis-ci.org/4so-fourseasons/react-hoc-spinners.svg?branch=master)](https://travis-ci.org/4so-fourseasons/react-hoc-spinners)
-[![Coverage Status](https://coveralls.io/repos/github/4so-fourseasons/react-hoc-spinners/badge.svg?branch=master)](https://coveralls.io/github/4so-fourseasons/react-hoc-spinners?branch=master)
-[![npm version](https://badge.fury.io/js/%404so-fourseasons%2Freact-hoc-spinners.svg)](https://badge.fury.io/js/%404so-fourseasons%2Freact-hoc-spinners)
-[![api docs](https://img.shields.io/badge/docs-API-C8022F.svg)](https://4so-fourseasons.github.io/react-hoc-spinners/)
-[![JavavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
+[![Build Status](https://travis-ci.org/{{cookiecutter.namespace}}/{{cookiecutter.project_name}}.svg?branch=master)](https://travis-ci.org/{{cookiecutter.namespace}}/{{cookiecutter.project_name}})
+[![Coverage Status](https://coveralls.io/repos/github/{{cookiecutter.namespace}}/{{cookiecutter.project_name}}/badge.svg?branch=master)](https://coveralls.io/github/{{cookiecutter.namespace}}/{{cookiecutter.project_name}}?branch=master)
+[![npm version](https://badge.fury.io/js/{%- if cookiecutter.scoped_package == 'yes' -%}%40{{cookiecutter.namespace}}%2F{%- endif -%}{{cookiecutter.project_name}}.svg)](https://badge.fury.io/js/{%- if cookiecutter.scoped_package == 'yes' -%}%40{{cookiecutter.namespace}}%2F{%- endif -%}{{cookiecutter.project_name}})
+[![api docs](https://img.shields.io/badge/docs-API-C8022F.svg)](https://{{cookiecutter.namespace}}.github.io/{{cookiecutter.project_name}})
 
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-# react-hoc-spinners
+# {{cookiecutter.project_name}}
 
-_react-hoc-spinners_ is a simple loading spinner library for your React projects.
+{{cookiecutter.short_description}}
 
 
 ## Installation
 
-`npm i --save @4so-fourseasons/react-hoc-spinners`
+```shell
+npm i --save {% if cookiecutter.scoped_package == 'yes' %}@{{cookiecutter.namespace}}/{% endif %}{{cookiecutter.project_name}}
+```
 
 
 ## Usage
 
-For detailed information about each component/function have a look at our [API](https://4so-fourseasons.github.io/react-hoc-spinners)
+## Documentation
 
-_Note: You can either use named imports of each respective component/function or use the default import with dot notation._
+[API](https://{{cookiecutter.namespace}}.github.io/{{cookiecutter.project_name}})
 
-
-### Default use case
-
-In most cases you will want to use the provided `makeWithLoadingSpinner` factory function.
-This provides you with a higher-order component which you can use to wrap your
-Components with a loading spinner whenever the provided condition is true.
-
-
-#### Example
-
-```js
-import { makeWithLoadingIndicator } from '@4so-fourseasons/react-hoc-spinners'
-
-import MyComponent from '<some-path>/MyComponent'
-
-const withLoadingIndicator = makeWithLoadingIndicator({
-    condition: ({ loading } => loading
-})
-
-// Export wrapped component
-export default withLoadingIndicator(MyComponent)
-```
-
-
-### Spinner without HOC
-
-It is also possible to use all provided spinners without a wrapping higher-order component, in case you want to implement all logic yourself. Just use named imports as shown in our API spec.
-
+[GitHub](https://github.com/{{cookiecutter.namespace}}/{{cookiecutter.project_name}})
 
 ## Versioning
 

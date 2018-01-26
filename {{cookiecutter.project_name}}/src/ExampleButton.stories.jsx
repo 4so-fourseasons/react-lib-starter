@@ -2,13 +2,13 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withDocs } from 'storybook-readme'
 
-import README from './README.md'
-import SimpleCircle from './index.jsx'
+import README from './ExampleButton.README.md'
+import ExampleButton from './ExampleButton'
 
-storiesOf('components/SimpleCircle', module)
+storiesOf('ExampleButton', module)
   .add('Default', withDocs(
     README,
     () => (
-      <SimpleCircle />
+      <ExampleButton>Click Me!</ExampleButton>
     ))
   )
